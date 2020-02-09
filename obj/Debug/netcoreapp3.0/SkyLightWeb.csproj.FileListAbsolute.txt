@@ -1,0 +1,8 @@
+/home/tenkay/Documents/DotNetProjects/SkyLightWeb/obj/Debug/netcoreapp3.0/SkyLightWeb.csprojAssemblyReference.cache
+/home/tenkay/Documents/DotNetProjects/SkyLightWeb/obj/Debug/netcoreapp3.0/SkyLightWeb.MvcApplicationPartsAssemblyInfo.cache
+/home/tenkay/Documents/DotNetProjects/SkyLightWeb/obj/Debug/netcoreapp3.0/SkyLightWeb.AssemblyInfoInputs.cache
+/home/tenkay/Documents/DotNetProjects/SkyLightWeb/obj/Debug/netcoreapp3.0/SkyLightWeb.AssemblyInfo.cs
+/home/tenkay/Documents/DotNetProjects/SkyLightWeb/obj/Debug/netcoreapp3.0/staticwebassets/SkyLightWeb.StaticWebAssets.Manifest.cache
+/home/tenkay/Documents/DotNetProjects/SkyLightWeb/obj/Debug/netcoreapp3.0/staticwebassets/SkyLightWeb.StaticWebAssets.xml
+/home/tenkay/Documents/DotNetProjects/SkyLightWeb/obj/Debug/netcoreapp3.0/SkyLightWeb.RazorAssemblyInfo.cache
+/home/tenkay/Documents/DotNetProjects/SkyLightWeb/obj/Debug/netcoreapp3.0/SkyLightWeb.RazorAssemblyInfo.cs

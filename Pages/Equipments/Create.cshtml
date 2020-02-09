@@ -1,0 +1,188 @@
+﻿@page
+@model CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@*<h1>Create</h1>
+
+<h4>Equipment</h4>*@
+<hr />
+@*<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Equipment.EquipmentID" class="control-label"></label>
+                <input asp-for="Equipment.EquipmentID" class="form-control" />
+                <span asp-validation-for="Equipment.EquipmentID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.EquipmentName" class="control-label"></label>
+                <input asp-for="Equipment.EquipmentName" class="form-control" />
+                <span asp-validation-for="Equipment.EquipmentName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Equipment.Description" class="control-label"></label>
+                <input asp-for="Equipment.Description" class="form-control" />
+                <span asp-validation-for="Equipment.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>*@
+
+
+
+
+<body>
+    <div class='container'>
+        <div class='panel panel-primary dialog-panel'>
+            <div class='panel-heading'>
+                <h5>Asset Manager - Register Equipment</h5>
+            </div>
+           
+            <div class='panel-body'>
+                <form class='form-horizontal' form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class='form-group'>
+                        <label class='control-label col-md-2 col-md-offset-2' asp-for="Equipment.EquipmentID"></label>
+
+                        <div class='col-md-3 indent-small'>
+                            <div class='form-group internal'>
+                                <input class='form-control' asp-for="Equipment.EquipmentID" placeholder='Equipment ID' type='text'>
+                            </div>
+                        </div>
+                        <div class='col-md-3 indent-small'>
+                            <div class='form-group internal'>
+                                <input class='form-control' asp-for="Equipment.EquipmentName" placeholder='Equipment Name' type='text'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' asp-for="Equipment.Description"></label>
+                            <div class='col-md-6'>
+                                <textarea class='form-control' asp-for="Equipment.Description" placeholder='Equipment Description' rows='3'></textarea>
+                            </div>
+                        </div>
+                    </div>
+                 
+                    <div class='form-group'>
+                        <label class='control-label col-md-2 col-md-offset-2' asp-for="Equipment.Discontinued"></label>
+                        <div class='col-md-8'>
+                            <div class='make-switch' data-off-label='NO' data-on-label='YES'>
+                                <input asp-for="Equipment.Discontinued" type='checkbox'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <label class='control-label col-md-2 col-md-offset-2' for='id_email'>Others One</label>
+                        <div class='col-md-6'>
+                            <div class='form-group'>
+                                <div class='col-md-11'>
+                                    <input class='form-control' placeholder='Others One' type='text'>
+                                </div>
+                            </div>
+                            <div class='form-group internal'>
+                                <div class='col-md-11'>
+                                    <input class='form-control' placeholder='Others Two' type='text'>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*<div class='form-group'>
+                    <label class='control-label col-md-2 col-md-offset-2' for='id_checkin'>Checkin</label>
+                    <div class='col-md-8'>
+                        <div class='col-md-3'>
+                            <div class='form-group internal input-group'>
+                                <input class='form-control datepicker' id='id_checkin'>
+                                <span class='input-group-addon'>
+                                    <i class='glyphicon glyphicon-calendar'></i>
+                                </span>
+                            </div>
+                        </div>
+                        <label class='control-label col-md-2' for='id_checkout'>Checkout</label>
+                        <div class='col-md-3'>
+                            <div class='form-group internal input-group'>
+                                <input class='form-control datepicker' id='id_checkout'>
+                                <span class='input-group-addon'>
+                                    <i class='glyphicon glyphicon-calendar'></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+                    @*<div class='form-group'>
+                    <label class='control-label col-md-2 col-md-offset-2' for='id_equipment'>Equipment type</label>
+                    <div class='col-md-8'>
+                        <div class='col-md-3'>
+                            <div class='form-group internal'>
+                                <select class='form-control' id='id_equipment'>
+                                    <option>Travel trailer</option>
+                                    <option>Fifth wheel</option>
+                                    <option>RV/Motorhome</option>
+                                    <option>Tent trailer</option>
+                                    <option>Pickup camper</option>
+                                    <option>Camper van</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class='col-md-9'>
+                            <div class='form-group internal'>
+                                <label class='control-label col-md-3' for='id_slide'>Slide-outs</label>
+                                <div class='make-switch' data-off-label='NO' data-on-label='YES' id='id_slide_switch'>
+                                    <input id='id_slide' type='checkbox' value='chk_hydro'>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+
+                    @*<div class='form-group'>
+                    <label class='control-label col-md-2 col-md-offset-2' for='id_service'>Required Service</label>
+                    <div class='col-md-8'>
+                        <select class='multiselect' id='id_service' multiple='multiple'>
+                            <option value='hydro'>Hydro</option>
+                            <option value='water'>Water</option>
+                            <option value='sewer'>Sewer</option>
+                        </select>
+                    </div>
+                </div>*@
+                    @*<div class='form-group'>
+                    <label class='control-label col-md-2 col-md-offset-2' for='id_pets'>Pets</label>
+                    <div class='col-md-8'>
+                        <div class='make-switch' data-off-label='NO' data-on-label='YES' id='id_pets_switch'>
+                            <input id='id_pets' type='checkbox' value='chk_hydro'>
+                        </div>
+                    </div>
+                </div>*@
+                    @*<div class='form-group'>
+                    <label class='control-label col-md-2 col-md-offset-2' for='id_comments'>Comments</label>
+                    <div class='col-md-6'>
+                        <textarea class='form-control' id='id_comments' placeholder='Additional comments' rows='3'></textarea>
+                    </div>
+                </div>*@
+                    <div class='form-group'>
+                        <div class='col-md-offset-4 col-md-3'>
+                            <input type="submit" value="Enroll Equipment" class="btn-lg btn-primary" />
+                            @*<button class='btn-lg btn-primary' type='submit'>Enroll Equipment</button>*@
+                        </div>
+                        <div>
+                <a asp-page="Index">Back to List</a>
+            </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

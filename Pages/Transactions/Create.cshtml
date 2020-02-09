@@ -1,0 +1,433 @@
+﻿@page
+@model CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<!-- 
+<body>
+    <div class='container'>
+        <div class='panel panel-primary dialog-panel'>
+            <div class='panel-heading'>
+                <h5>Transaction Manager - Transaction Enrollment</h5>
+            </div>
+           
+            <div class='panel-body'>
+                <form class='form-horizontal' form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class='form-group'>
+                        <label class='control-label col-md-2 col-md-offset-2' asp-for="Transaction.TransactionID"></label>
+
+                        <div class='col-md-3 indent-small'>
+                            <div class='form-group internal'>
+                                <input class='form-control' asp-for="Transaction.TransactionID" placeholder='Transaction ID' type='text'>
+                            </div>
+                        </div>
+                        <div class='col-md-3 indent-small'>
+                            <div class='form-group internal'>
+                                <input class='form-control' asp-for="Transaction.TransactionName" placeholder='Transaction Name' type='text'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <div class='form-group'>
+                            <label class='control-label col-md-2 col-md-offset-2' asp-for="Transaction.Description"></label>
+                            <div class='col-md-6'>
+                                <textarea class='form-control' asp-for="Transaction.Description" placeholder='Transaction Description' rows='3'></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class='form-group'>
+                        <label class='control-label col-md-2 col-md-offset-2' for='id_email'>Others One</label>
+                        <div class='col-md-6'>
+                            <div class='form-group'>
+                                <div class='col-md-11'>
+                                    <input class='form-control' placeholder='Others One' type='text'>
+                                </div>
+                            </div>
+                            <div class='form-group internal'>
+                                <div class='col-md-11'>
+                                    <input class='form-control' placeholder='Others Two' type='text'>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*<div class='form-group'>
+                    <label class='control-label col-md-2 col-md-offset-2' for='id_checkin'>Checkin</label>
+                    <div class='col-md-8'>
+                        <div class='col-md-3'>
+                            <div class='form-group internal input-group'>
+                                <input class='form-control datepicker' id='id_checkin'>
+                                <span class='input-group-addon'>
+                                    <i class='glyphicon glyphicon-calendar'></i>
+                                </span>
+                            </div>
+                        </div>
+                        <label class='control-label col-md-2' for='id_checkout'>Checkout</label>
+                        <div class='col-md-3'>
+                            <div class='form-group internal input-group'>
+                                <input class='form-control datepicker' id='id_checkout'>
+                                <span class='input-group-addon'>
+                                    <i class='glyphicon glyphicon-calendar'></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+                    @*<div class='form-group'>
+                    <label class='control-label col-md-2 col-md-offset-2' for='id_equipment'>Equipment type</label>
+                    <div class='col-md-8'>
+                        <div class='col-md-3'>
+                            <div class='form-group internal'>
+                                <select class='form-control' id='id_equipment'>
+                                    <option>Travel trailer</option>
+                                    <option>Fifth wheel</option>
+                                    <option>RV/Motorhome</option>
+                                    <option>Tent trailer</option>
+                                    <option>Pickup camper</option>
+                                    <option>Camper van</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class='col-md-9'>
+                            <div class='form-group internal'>
+                                <label class='control-label col-md-3' for='id_slide'>Slide-outs</label>
+                                <div class='make-switch' data-off-label='NO' data-on-label='YES' id='id_slide_switch'>
+                                    <input id='id_slide' type='checkbox' value='chk_hydro'>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+
+                    @*<div class='form-group'>
+                    <label class='control-label col-md-2 col-md-offset-2' for='id_service'>Required Service</label>
+                    <div class='col-md-8'>
+                        <select class='multiselect' id='id_service' multiple='multiple'>
+                            <option value='hydro'>Hydro</option>
+                            <option value='water'>Water</option>
+                            <option value='sewer'>Sewer</option>
+                        </select>
+                    </div>
+                </div>*@
+                    @*<div class='form-group'>
+                    <label class='control-label col-md-2 col-md-offset-2' for='id_pets'>Pets</label>
+                    <div class='col-md-8'>
+                        <div class='make-switch' data-off-label='NO' data-on-label='YES' id='id_pets_switch'>
+                            <input id='id_pets' type='checkbox' value='chk_hydro'>
+                        </div>
+                    </div>
+                </div>*@
+                    @*<div class='form-group'>
+                    <label class='control-label col-md-2 col-md-offset-2' for='id_comments'>Comments</label>
+                    <div class='col-md-6'>
+                        <textarea class='form-control' id='id_comments' placeholder='Additional comments' rows='3'></textarea>
+                    </div>
+                </div>*@
+                    <div class='form-group'>
+                        <div class='col-md-offset-4 col-md-3'>
+                            <input type="submit" value="Enroll Transaction" class="btn-lg btn-primary" />
+                            @*<button class='btn-lg btn-primary' type='submit'>Enroll Transaction</button>*@
+                        </div>
+                        <div>
+                <a asp-page="Index">Back to List</a>
+            </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+ -->
+<div class='container'>
+        <div class='panel panel-primary dialog-panel'>
+            <div class='panel-heading'>
+                <h5>Transaction details</h5>
+            </div>
+           
+            <div class='panel-body'>
+    <div class="container" style="max-width:640px">
+        <div class="master">
+            <table>
+                <tr>
+                    <td>Transaction ID</td>
+                    <td>
+                        <input type="text" class="form-control" id="orderNo" />
+                        <span class="error">Transaction ID required</span>
+                    </td>
+                    <td>Transaction Date</td>
+                    <td>
+                        <input type="text" id="transactionDate" />
+                        <span class="error">Valid transaction date required (ex. MM-dd-yyyy)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td colspan="3">
+                        <textarea id="description" class="form-control" style="width:100%"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="table details">
+            <h4>Transaction Items</h4>
+            <table width="100%">
+                <tr>
+                    <td>Asset Name</td>
+                    <td>Quantity</td>
+                    <td>Rate</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                <h4>Equipments</h4>
+<select asp-for="EquipmentID" class="form-control" asp-items="Model.Equipments">
+    <option value="">Select Category</option>
+</select>
+<h4>Assets</h4>
+<select class="form-control" asp-for="AssetID"></select>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" class="form-control" id="assetName" />
+                        <span class="error">Asset name required</span>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" id="quantity" />
+                        <span class="error">Valid quantity required</span>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" id="rate" />
+                        <span class="error">Valid rate required</span>
+                    </td>
+                    <td>
+                        <input type="button" class="btn btn-primary" id="add" value="add" />
+                    </td>
+                </tr>
+            </table>
+            <div id="orderItems" class="tablecontainer">
+ 
+            </div>
+            <div style="padding:10px 0px; text-align:right">
+                <input id="submit" type="button" class="btn btn-success" value="Save" style="padding:10px 20px" />
+            </div>
+        </div>
+    </div>
+ 
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+</div>
+</div>
+ 
+<style>
+    /*Adding some css for looks good*/
+    span.error {
+        display:block;
+        visibility:hidden;
+        color:red;
+        font-size:90%;
+    }
+ 
+ 
+    /*css for table*/
+    .container td {
+        vertical-align: top;
+    }
+    .tablecontainer table {
+        width: 100%;
+        border-collapse: collapse;
+        border-top: 1px solid #BFAEAE;
+        border-right: 1px solid #BFAEAE;
+    }
+    .tablecontainer th {
+        border-bottom: 2px solid #BFAEAE !important;
+    }
+    .tablecontainer th, .tablecontainer td {
+        text-align: left;
+        border-left: 1px solid #BFAEAE;
+        padding: 5px;
+        border-bottom: 1px solid #BFAEAE;
+    }
+    .ui-widget {
+        font-size:12px !important;
+    }
+</style>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+        //Date Picker
+        $(function () {
+            $('#transactionDate').datepicker({
+                dateFormat : 'mm-dd-yy'
+            });
+        });
+ 
+        $(document).ready(function () {
+            var orderItems = [];
+            //Add button click function
+            $('#add').click(function () {
+                //Check validation of transaction asset
+                var isValidItem = true;
+                if ($('#assetName').val().trim() == '') {
+                    isValidItem = false;
+                    $('#assetName').siblings('span.error').css('visibility', 'visible');
+                }
+                else {
+                    $('#assetName').siblings('span.error').css('visibility', 'hidden');
+                }
+ 
+                if (!($('#quantity').val().trim() != '' && !isNaN($('#quantity').val().trim()))) {
+                    isValidItem = false;
+                    $('#quantity').siblings('span.error').css('visibility', 'visible');
+                }
+                else {
+                    $('#quantity').siblings('span.error').css('visibility', 'hidden');
+                }
+ 
+                if (!($('#rate').val().trim() != '' && !isNaN($('#rate').val().trim()))) {
+                    isValidItem = false;
+                    $('#rate').siblings('span.error').css('visibility', 'visible');
+                }
+                else {
+                    $('#rate').siblings('span.error').css('visibility', 'hidden');
+                }
+ 
+                //Add asset to list if valid
+                if (isValidItem) {
+                    orderItems.push({
+                        assetName: $('#assetName').val().trim(),
+                        Quantity: parseInt($('#quantity').val().trim()),
+                        Rate: parseFloat($('#rate').val().trim()),
+                        TotalAmount: parseInt($('#quantity').val().trim()) * parseFloat($('#rate').val().trim())
+                    });
+ 
+                    //Clear fields
+                    $('#assetName').val('').focus();
+                    $('#quantity,#rate').val('');
+ 
+                }
+                //populate transaction items
+                GeneratedItemsTable();
+ 
+            });
+            //Save button click function
+            $('#submit').click(function () {
+                //validation of transaction
+                var isAllValid = true;
+                if (orderItems.length == 0) {
+                    $('#orderItems').html('<span style="color:red;">Please add transaction items</span>');
+                    isAllValid = false;
+                }
+ 
+                if ($('#orderNo').val().trim() == '') {
+                    $('#orderNo').siblings('span.error').css('visibility', 'visible');
+                    isAllValid = false;
+                }
+                else {
+                    $('#orderNo').siblings('span.error').css('visibility', 'hidden');
+                }
+ 
+                if ($('#transactionDate').val().trim() == '') {
+                    $('#transactionDate').siblings('span.error').css('visibility', 'visible');
+                    isAllValid = false;
+                }
+                else {
+                    $('#transactionDate').siblings('span.error').css('visibility', 'hidden');
+                }
+ 
+                //Save if valid
+                if (isAllValid) {
+                    var data = {
+                        OrderNo: $('#orderNo').val().trim(),
+                        transactionDate: $('#transactionDate').val().trim(),
+                        //Sorry forgot to add Description Field
+                        Description : $('#description').val().trim(),
+                        OrderDetails : orderItems
+                    }
+ 
+                    $(this).val('Please wait...');
+ 
+                    $.ajax({
+                        url: '/Home/SaveOrder',
+                        type: "POST",
+                        data: JSON.stringify(data),
+                        dataType: "JSON",
+                        contentType: "application/json",
+                        success: function (d) {
+                            //check is successfully save to database 
+                            if (d.status == true) {
+                                //will send status from server side
+                                alert('Successfully done.');
+                                //clear form
+                                orderItems = [];
+                                $('#orderNo').val('');
+                                $('#transactionDate').val('');
+                                $('#orderItems').empty();
+                            }
+                            else {
+                                alert('Failed');
+                            }
+                            $('#submit').val('Save');
+                        },
+                        error: function () {
+                            alert('Error. Please try again.');
+                            $('#submit').val('Save');
+                        }
+                    });
+                }
+ 
+            });
+            //function for show added items in table
+            function GeneratedItemsTable() {
+                if (orderItems.length > 0)
+                {
+                    var $table = $('<table/>');
+                    $table.append('<thead><tr><th>Asset</th><th>Quantity</th><th>Rate</th><th>Total</th><th></th></tr></thead>');
+                    var $tbody = $('<tbody/>');
+                    $.each(orderItems, function (i, val) {
+                        var $row = $('<tr/>');
+                        $row.append($('<td/>').html(val.assetName));
+                        $row.append($('<td/>').html(val.Quantity));
+                        $row.append($('<td/>').html(val.Rate));
+                        $row.append($('<td/>').html(val.TotalAmount));
+                        var $remove = $('<a href="#">Remove</a>');
+                        $remove.click(function (e) {
+                            e.preventDefault();
+                            orderItems.splice(i, 1);
+                            GeneratedItemsTable();
+                        });
+                        $row.append($('<td/>').html($remove));
+                        $tbody.append($row);
+                    });
+                    console.log("current", orderItems);
+                    $table.append($tbody);
+                    $('#orderItems').html($table);
+                }
+                else {
+                    $('#orderItems').html('');
+                }
+            }
+        });
+ 
+    </script>
+    <script>
+    $(function () {
+        $("#EquipmentID").on("change", function() {
+            var assetId = $(this).val();
+            $("#AssetID").empty();
+            $("#AssetID").append("<option value=''>Select Asset</option>");
+            $.getJSON(`?handler=Assets&assetId=${assetId}`, (data) => {
+                $.each(data, function (i, item) {
+                    $("#AssetID").append(`<option value="${item.AssetID}">${item.AssetName}</option>`);
+                });
+            });
+        });
+    });
+</script>
+}

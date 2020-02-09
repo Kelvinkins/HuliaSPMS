@@ -1,0 +1,74 @@
+﻿@page
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3>Equipments</h3>
+<p>
+    <a asp-page="Create" class="btn btn-primary">Enroll New Equipment</a>
+</p>
+                <div class="table100 ver1 m-b-110">
+                    <div class="table100-head">
+                        <table>
+                            <thead>
+                                <tr class="row100 head">
+                                    <th  class="cell100 column1">
+                                        @Html.DisplayNameFor(model => model.Equipment[0].EquipmentName)
+                                    </th>
+                                    <th  class="cell100 column2">
+                                        @Html.DisplayNameFor(model => model.Equipment[0].Description)
+                                    </th>
+                                    <th  class="cell100 column3">
+                                        @Html.DisplayNameFor(model => model.Equipment[0].EquipmentType)
+
+                                    </th>
+                                    <th  class="cell100 column4">
+                                        All Qty
+
+                                    </th>
+                                    <th class="cell100 column5">
+
+                                    </th>
+                                </tr>
+                               
+                            </thead>
+                        </table>
+                    </div>
+
+                    <div class="table100-body js-pscroll">
+                        <table>
+                            <tbody>
+
+                             
+                                @foreach (var item in Model.Equipment)
+                                {
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">
+                                        @Html.DisplayFor(modelItem => item.EquipmentName)
+                                    </td>
+                                    <td class="cell100 column2">
+                                        @Html.DisplayFor(modelItem => item.Description)
+                                    </td>
+                                    <td class="cell100 column3">
+                                        @Html.DisplayFor(modelItem => item.EquipmentType)
+                                    </td>
+                                    <td class="cell100 column4">
+                                        @Html.DisplayFor(modelItem => item.Assets.Count)
+                                    </td>
+                                    <td class="cell100 column5">
+                                        <a asp-page="./Edit" asp-route-id="@item.EquipmentID">Edit</a> |
+                                        <a asp-page="./Details" style="color:green" asp-route-id="@item.EquipmentID">Details</a> |
+                                        <a asp-page="./Delete" style="color:red" asp-route-id="@item.EquipmentID">Delete</a>
+                                    </td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+
+   
